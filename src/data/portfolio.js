@@ -4,7 +4,7 @@ export default [
   {
     id: 1,
     title: 'Record App',
-    imgUrl: 'public/assets/recordAppThumb.png',
+    imgUrl: '/assets/recordAppThumb.png',
     stack: ['React', 'MongoDB', 'Express.js'],
     link: 'https://recordapp.chickenkiller.com',
     repo: '/record-app',
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     title: 'Portfolio Website',
-    imgUrl: 'public/assets/portfolioThumb.png',
+    imgUrl: '/assets/portfolioThumb.png',
     stack: ['React', 'Tailwind', 'Vite'],
     link: '',
     repo: '/Portfolio',
@@ -20,7 +20,7 @@ export default [
   {
     id: 3,
     title: 'Civ 6 Victory Tracker',
-    imgUrl: 'public/assets/coming_soon_hourglass.png',
+    imgUrl: '/assets/coming_soon_hourglass.png',
     stack: ['HTML', 'CSS', 'JavaScript'],
     link: '',
     repo: '',
