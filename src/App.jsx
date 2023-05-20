@@ -1,3 +1,6 @@
+/** @format */
+
+import { ToastContainer } from 'react-toastify'
 import Navbar from './components/Navbar'
 import Intro from './components/Intro'
 import Portfolio from './components/Portfolio'
@@ -23,6 +26,10 @@ function App() {
           <Footer />
         </div>
       </div>
+      <ToastContainer
+        position='top-right'
+        autoClose={5000}
+      />
     </div>
   )
 }

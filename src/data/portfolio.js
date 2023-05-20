@@ -1,23 +1,28 @@
+/** @format */
+
 export default [
   {
     id: 1,
     title: 'Record App',
-    imgUrl: 'https://loremflickr.com/640/360',
+    imgUrl: 'public/assets/recordAppThumb.png',
     stack: ['React', 'MongoDB', 'Express.js'],
     link: 'https://recordapp.chickenkiller.com',
+    repo: '/record-app',
   },
   {
     id: 2,
     title: 'Portfolio Website',
-    imgUrl: 'https://loremflickr.com/640/360',
+    imgUrl: 'public/assets/portfolioThumb.png',
     stack: ['React', 'Tailwind', 'Vite'],
-    link: 'https://evanand.dev',
+    link: '',
+    repo: '/Portfolio',
   },
   {
     id: 3,
-    title: 'Placeholder Website',
-    imgUrl: 'https://loremflickr.com/640/360',
+    title: 'Civ 6 Victory Tracker',
+    imgUrl: 'public/assets/coming_soon_hourglass.png',
     stack: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://example.com',
+    link: '',
+    repo: '',
   },
 ]

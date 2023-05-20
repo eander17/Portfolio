@@ -1,9 +1,15 @@
+/** @format */
+
 // import { useState } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import ThemeButton from './ThemeButton'
 // import PropTypes from 'prop-types'
 
 const Navbar = () => {
+  const githubPage = import.meta.env.VITE_GITHUB_PAGE
+  const linkedInPage = import.meta.env.VITE_LINKEDIN_PAGE
+
+  console.log(githubPage, linkedInPage)
   return (
     <div
       className=' top-0 left-0 w-screen h-16 m-0 shadow-lg
@@ -13,14 +19,26 @@ const Navbar = () => {
         '
     >
       <div className='group px-2'>
-        <FaGithub className='navbar-icon group' />
+        <a
+          href={githubPage}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaGithub className='navbar-icon group' />
+        </a>
         <span className='navbar-tooltip group-hover:scale-100'>
           Check out my GitHub!
         </span>
       </div>
 
       <div className='group px-2'>
-        <FaLinkedin className='navbar-icon group' />
+        <a
+          href={linkedInPage}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <FaLinkedin className='navbar-icon group' />
+        </a>
         <span className='navbar-tooltip group-hover:scale-100'>
           Connect with me on LinkedIn!
         </span>
@@ -35,18 +53,4 @@ const Navbar = () => {
   )
 }
 
-// const NavbarIcon = ({ icon }) => {
-//   return <div className='navbar-icon'>{icon}</div>
-// }
-
-// NavbarIcon.propTypes = {
-//   icon: PropTypes.element.isRequired,
-// }
-
 export default Navbar
-
-// <ul className='flex flex-row justify-center py-2 my-1 self-end h-12'>
-//   <li>
-//     <ThemeButton />
-//   </li>
-// </ul>

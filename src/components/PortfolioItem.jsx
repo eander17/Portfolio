@@ -1,6 +1,11 @@
+/** @format */
+import { FaGithub } from 'react-icons/fa'
+
 import PropTypes from 'prop-types'
 
-const PortfolioItem = ({ title, imgUrl, stack, link }) => {
+const PortfolioItem = ({ title, imgUrl, stack, link, repo }) => {
+  const githubPage = `${import.meta.env.VITE_GITHUB_PAGE}${repo}`
+
   return (
     <div
       className='border-2 rounded-md overflow-hidden 
@@ -28,18 +33,35 @@ const PortfolioItem = ({ title, imgUrl, stack, link }) => {
             </span>
           ))}
         </p>
-        <a
-          href={link}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='inline-block mt-2 px-4 py-2 font-semibold rounded-xl
+        <div className='flex flex-row items-start justify-start'>
+          {repo && (
+            <a
+              href={githubPage}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-block mt-3 mx-1 mr-2 px-2 py-2 font-semibold rounded-3xl
+          text-white bg-gray-800 
+          dark:bg-stone-600 hover:bg-indigo-600 dark:hover:bg-indigo-600
+          transition-all duration-200 ease-linear cursor-pointer hover:rounded-lg'
+            >
+              <FaGithub size='1.5rem' />{' '}
+            </a>
+          )}
+          {link && (
+            <a
+              href={link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-block mt-3 px-4 py-2 font-semibold rounded-xl
           text-white bg-gray-800  
           dark:bg-stone-600 hover:bg-indigo-600 dark:hover:bg-indigo-600
           transition-all duration-200 ease-linear cursor-pointer hover:rounded-md
           '
-        >
-          Check it out!
-        </a>
+            >
+              Check it out!
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )
@@ -50,6 +72,7 @@ PortfolioItem.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   stack: PropTypes.array.isRequired,
   link: PropTypes.string.isRequired,
+  repo: PropTypes.string.isRequired,
 }
 
 export default PortfolioItem
